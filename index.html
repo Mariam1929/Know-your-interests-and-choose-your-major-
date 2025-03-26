@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختيار التخصص المناسب</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>اختبار تحديد التخصص المناسب</h1>
+        <form id="quizForm">
+            <label>معدلك الدراسي (%)</label>
+            <input type="number" id="grade" min="0" max="100" required>
+
+            <label>ما هو طموحك الجامعي؟</label>
+            <select id="futureGoal">
+                <option value="طبي">طبي</option>
+                <option value="هندسي">هندسي</option>
+                <option value="إداري">إداري</option>
+                <option value="أدبي">أدبي</option>
+                <option value="غير محدد">غير محدد</option>
+            </select>
+
+            <label>ما هي المواد التي تفضلها أكثر؟</label>
+            <select id="preferredSubject">
+                <option value="رياضيات وفيزياء">رياضيات وفيزياء</option>
+                <option value="كيمياء وأحياء">كيمياء وأحياء</option>
+                <option value="مواد أدبية">مواد أدبية</option>
+                <option value="إدارة وأعمال">إدارة وأعمال</option>
+            </select>
+
+            <label>ما هي درجاتك في المواد العلمية؟ (رياضيات، فيزياء، كيمياء، أحياء)</label>
+            <input type="number" id="scienceScore" min="0" max="100" required>
+
+            <label>ما هي درجاتك في المواد الأدبية؟ (عربي، تاريخ، جغرافيا)</label>
+            <input type="number" id="artsScore" min="0" max="100" required>
+
+            <label>هل تجد المواد العلمية صعبة أم سهلة؟</label>
+            <select id="scienceDifficulty">
+                <option value="سهلة">سهلة</option>
+                <option value="متوسطة">متوسطة</option>
+                <option value="صعبة">صعبة</option>
+            </select>
+
+            <label>هل تجد المواد الأدبية صعبة أم سهلة؟</label>
+            <select id="artsDifficulty">
+                <option value="سهلة">سهلة</option>
+                <option value="متوسطة">متوسطة</option>
+                <option value="صعبة">صعبة</option>
+            </select>
+
+            <button type="button" onclick="calculateResult()">احصل على التخصص المناسب</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
